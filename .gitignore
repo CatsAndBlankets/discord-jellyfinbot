@@ -1,6 +1,6 @@
 notes.txt
 guildInfo.json
-docker-compose personal.yaml
+docker-compose.yaml
 deploy-commands.js
 events/interactionCreate.js
 node_modules
@@ -8,3 +8,4 @@ ButterToast.code-workspace
 APIcalls.http
 secret.js
 Dockerfile
+config.js
