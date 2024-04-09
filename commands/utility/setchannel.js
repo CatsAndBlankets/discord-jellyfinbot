@@ -1,6 +1,9 @@
 const config = require('../../config.js')
 const jsonPath = '../../guildInfo.json'
-const jsonFile = require(jsonPath)
+const jsonFile = {
+    guildId: '',
+    channelId: ''
+}
 const fs = require('fs')
 const path = require('path')
 
@@ -12,7 +15,7 @@ module.exports = {
     },
     async execute (interaction) {
         if (interaction.author.id !== config.owner) {
-            return interaction.channel.send("You're not me, so you can't use this.")
+            return interaction.channel.send("You're not the owner, so you can't use this.")
         }
 
         jsonFile.channelId = interaction.channelId
