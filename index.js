@@ -2,6 +2,32 @@ const fs = require('node:fs')
 const path = require('node:path')
 const { Client, Collection, GatewayIntentBits, Partials } = require('discord.js')
 const config = require('./config')
+
+// if the guildInfo json doesn't exist, create a blank one
+const jsonPath = 'guildInfo.json'
+const jsonFile = {
+    general: {
+        guildId: '',
+        channelId: ''
+    },
+    suggestion: {
+        guildId: '',
+        channelId: ''
+    }
+}
+if (fs.existsSync(jsonPath)) {
+    console.log('exists')
+} else {
+    console.log('not exist')
+
+    // write the guild and channel ids to guildInfo json file
+    fs.writeFileSync(jsonPath, JSON.stringify(jsonFile, null, 2), function (err) {
+        if (err) {
+            console.log('something went wrong')
+        }
+    })
+}
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,

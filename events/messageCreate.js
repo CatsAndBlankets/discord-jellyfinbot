@@ -9,8 +9,8 @@ module.exports = {
         // don't process if the message doesn't have the prefix or the message is from a bot
         if (!message.content.startsWith(config.prefix) || message.author.bot) return
 
-        // don't process if the message is in the wrong server or channel AND it's not to use the "setchannel" command. Or if it's not me
-        if ((message.guildId !== guildInfo.guildId || message.channelId !== guildInfo.channelId) && (message.content.slice(config.prefix.length).trim().split(/ +/).shift().toLowerCase() !== 'setchannel')) return
+        // don't process if the message is in the wrong server or channel AND it's not to use the "setchannel" command.
+        if ((message.guildId !== guildInfo.general.guildId || message.channelId !== guildInfo.general.channelId) && (message.content.slice(config.prefix.length).trim().split(/ +/).shift().toLowerCase() !== 'setchannel')) return
 
         const args = message.content.slice(config.prefix.length).trim().split(/ +/)
         console.log('args: ' + args)
