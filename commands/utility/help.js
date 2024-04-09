@@ -9,7 +9,7 @@ module.exports = {
     },
     async execute (interaction) {
         const embed = new EmbedBuilder()
-            .setColor(0x9901bb)
+            .setColor(config.color)
             .setTitle('Command Menu')
             .setDescription('Here are the commands that I got set up so far: ')
             .addFields(

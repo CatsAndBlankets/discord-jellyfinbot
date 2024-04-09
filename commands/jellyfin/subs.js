@@ -88,7 +88,7 @@ module.exports = {
             .addComponents(back)
 
         const embedMessage = new EmbedBuilder()
-            .setColor(0x9901bb)
+            .setColor(config.color)
             .setTitle('Subtitles')
             .setDescription(`Here are the subtitles for this ${nowPlaying.Type}:\n` + subtitleEmbed)
 
@@ -132,7 +132,7 @@ module.exports = {
                 )
             }
             const embedUpdate = new EmbedBuilder()
-                .setColor(0x9901bb)
+                .setColor(config.color)
                 .setTitle('Subtitles')
                 .setDescription(`${i.values[0].split('|')[1]} was selected`)
 

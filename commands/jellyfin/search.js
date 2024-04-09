@@ -51,7 +51,7 @@ module.exports = {
 
 
         const embedMessage = new EmbedBuilder()
-            .setColor(0x9901bb)
+            .setColor(config.color)
             .setTitle('Search Results')
             .setDescription("Here's what I found: ");
 

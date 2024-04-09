@@ -49,7 +49,7 @@ module.exports = {
 
         const nowPlayingTitle = nowPlaying.Type === 'Episode' ? `${nowPlaying.SeriesName}: Season ${nowPlaying.ParentIndexNumber} Episode ${nowPlaying.IndexNumber}` : `${nowPlaying.Name} (${nowPlaying.ProductionYear})`
         const embedMessasge = new EmbedBuilder()
-            .setColor(0x9901bb)
+            .setColor(config.color)
             .setTitle(`${nowPlayingTitle}`)
             .setURL(nowPlaying.ExternalUrls[0].Url)
             .setThumbnail(`attachment://${PosterImg.name}`)
