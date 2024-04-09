@@ -22,7 +22,7 @@ module.exports = {
 
         try {
             interaction.client.commands.delete(command.data.name)
-            const newCommand = require(`../jellyfin/${command.data.name}.js`)
+            const newCommand = require(`../${command.data.folder}/${command.data.name}.js`)
             interaction.client.commands.set(newCommand.data.name, newCommand)
             await interaction.reply(`Command \`${newCommand.data.name}\` was reloaded!`)
         } catch (error) {
