@@ -7,3 +7,4 @@ node_modules
 ButterToast.code-workspace
 APIcalls.http
 secret.js
+Dockerfile
